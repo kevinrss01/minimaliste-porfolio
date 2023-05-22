@@ -1,4 +1,4 @@
-@import 'homepage.css';
+@import './components/homepage.css';
 @import './components/AboutMe.css';
 @tailwind base;
 @tailwind components;
