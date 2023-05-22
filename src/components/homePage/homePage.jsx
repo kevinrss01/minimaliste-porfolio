@@ -1,6 +1,7 @@
 import React from 'react'
 import Skils from './Skils'
 import AboutMe from './AboutMe'
+import ExperiencesAndFormations from './ExperiencesAndFormations'
 
 const myComponents = [
     {
@@ -8,6 +9,9 @@ const myComponents = [
     },
     {
         comp: <Skils />,
+    },
+    {
+        comp: <ExperiencesAndFormations />,
     },
 ]
 
