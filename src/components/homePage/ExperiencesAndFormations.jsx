@@ -4,7 +4,7 @@ import { GiNetworkBars } from 'react-icons/gi'
 import { FaSchool } from 'react-icons/fa'
 import { BiCode } from 'react-icons/bi'
 import { ipssiTecho, ocTechno } from '../../utils/data'
-import Loader from '../loader'
+import Loader from '../Loader'
 
 export default function ExperiencesAndFormations() {
    const [showCard, setShowCard] = useState(true)
