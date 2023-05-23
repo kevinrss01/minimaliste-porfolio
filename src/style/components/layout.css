@@ -1,0 +1,31 @@
+.button-to-projects {
+   position: absolute;
+   left: 10px;
+}
+
+h1 {
+   text-align: center;
+}
+
+.App-header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 15px;
+   margin-bottom: 50px;
+   width: 100%;
+}
+
+.link-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: auto;
+   position: absolute;
+   right: 0;
+   width: 130px;
+}
+
+.link-container .a {
+   cursor: pointer;
+}

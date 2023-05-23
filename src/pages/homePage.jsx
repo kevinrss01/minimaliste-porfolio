@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Skils from './Skils'
-import AboutMe from './AboutMe'
-import ExperiencesAndFormations from './ExperiencesAndFormations'
+import Skils from '../components/homePage/Skils'
+import AboutMe from '../components/homePage/AboutMe'
+import ExperiencesAndFormations from '../components/homePage/ExperiencesAndFormations'
 import { ProgressBar } from '@tremor/react'
-import Projets from './Projets'
 
 const myComponents = [
    {
@@ -14,9 +13,6 @@ const myComponents = [
    },
    {
       comp: <ExperiencesAndFormations />,
-   },
-   {
-      comp: <Projets />,
    },
 ]
 

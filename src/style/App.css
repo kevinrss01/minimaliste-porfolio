@@ -1,5 +1,7 @@
-@import './components/homepage.css';
+@import './pages/homepage.css';
+@import './pages/projects.css';
 @import './components/AboutMe.css';
+@import './components/layout.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
