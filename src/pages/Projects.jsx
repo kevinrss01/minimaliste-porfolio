@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import Loader from '../components/Loader'
 import { Card, Title, Text, Bold } from '@tremor/react'
 import { AiFillGithub } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
+import { ThemeContext } from '../components/layout/layout'
 
-export default function Projects() {
+export default function Projects({ color }) {
    const [projects, setProjects] = useState([])
    const [isLoading, setIsLoading] = useState(true)
    const [cardId, setCardId] = useState('')
+   const { theme, setTheme } = useContext(ThemeContext)
 
    const callData = async () => {
       await axios
          .get('https://api.github.com/users/kevinrss01/repos')
          .then((response) => {
-            toast.success('Données récupérées avec succès')
             setProjects(response.data)
             setIsLoading(false)
             console.log(response.data)
@@ -58,20 +59,30 @@ export default function Projects() {
                                  setCardId('0')
                               }}
                               onClick={() => {
-                                 navigate(`/project/${project.id}`)
+                                 navigate(`/project/${project.name}`)
                               }}
-                              style={{ cursor: 'pointer' }}
+                              style={{
+                                 backgroundColor: theme === 'dark' ? '#282A3A' : 'white',
+                                 color: theme === 'dark' ? 'white' : null,
+                                 cursor: 'pointer',
+                              }}
                            >
                               <div style={{ display: 'flex', alignItems: 'center' }}>
                                  <AiFillGithub style={{ marginRight: '5px' }} />
-                                 <Title>{project.name}</Title>
+                                 <Title color={theme === 'dark' ? 'white' : null}>
+                                    {project.name}
+                                 </Title>
                               </div>
 
-                              <Text>
+                              <Text color={theme === 'dark' ? 'white' : null}>
                                  <Bold>Description : </Bold>{' '}
                                  {project.description
                                     ? project.description
                                     : 'Aucune description 🥲'}
+                              </Text>
+                              <Text color={theme === 'dark' ? 'white' : null}>
+                                 <Bold>Langage : </Bold>{' '}
+                                 {project.language ? project.language : 'Inconnu'}
                               </Text>
                            </Card>
                         )

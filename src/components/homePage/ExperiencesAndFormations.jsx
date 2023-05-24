@@ -6,13 +6,20 @@ import { BiCode } from 'react-icons/bi'
 import { ipssiTecho, ocTechno } from '../../utils/data'
 import Loader from '../Loader'
 
-export default function ExperiencesAndFormations() {
+export default function ExperiencesAndFormations({ color }) {
    const [showCard, setShowCard] = useState(true)
    const [isLoading, setIsLoading] = useState(false)
 
    return (
       <section>
-         <Card decoration='top' decorationColor='red'>
+         <Card
+            decoration='top'
+            decorationColor='red'
+            style={{
+               backgroundColor: color === 'dark' ? '#282A3A' : 'white',
+               color: color === 'dark' ? 'white' : null,
+            }}
+         >
             <TabList
                defaultValue='1'
                onValueChange={(value) => {
@@ -21,6 +28,7 @@ export default function ExperiencesAndFormations() {
                   setIsLoading(false)
                }}
                className='mt-6'
+               color={color === 'dark' ? 'white' : null}
             >
                <Tab value='1' text='Experiences' icon={GiNetworkBars} />
                <Tab value='2' text='Formations' icon={FaSchool} />
@@ -32,7 +40,7 @@ export default function ExperiencesAndFormations() {
                   {showCard === true ? (
                      <>
                         <br />
-                        <Subtitle>
+                        <Subtitle color={color === 'dark' ? 'white' : null}>
                            {' '}
                            <a
                               href='https://www.eurostep.com/'
@@ -46,7 +54,7 @@ export default function ExperiencesAndFormations() {
                         </Subtitle>
                         <br />
                         <Bold>Mes missions :</Bold>
-                        <Text>
+                        <Text color={color === 'dark' ? 'white' : null}>
                            - Développement de fonctionnalités front-end sur des applications web.
                            <br />- Résolution de bugs ou amélioration de fonctionnalités existantes.{' '}
                            <br />- Création de documentation technique pour les développeurs.
@@ -67,7 +75,7 @@ export default function ExperiencesAndFormations() {
                   ) : (
                      <>
                         <br />
-                        <Subtitle>
+                        <Subtitle color={color === 'dark' ? 'white' : null}>
                            {' '}
                            <a
                               href='https://ecole-ipssi.com/'
@@ -81,10 +89,14 @@ export default function ExperiencesAndFormations() {
                         </Subtitle>
                         <br />
                         {ipssiTecho.map((item, index) => {
-                           return <Text key={index}>- {item}</Text>
+                           return (
+                              <Text color={color === 'dark' ? 'white' : null} key={index}>
+                                 - {item}
+                              </Text>
+                           )
                         })}
                         <br />
-                        <Subtitle>
+                        <Subtitle color={color === 'dark' ? 'white' : null}>
                            {' '}
                            <a
                               href='https://openclassrooms.com/fr/paths/717-developpeur-web'
@@ -97,11 +109,15 @@ export default function ExperiencesAndFormations() {
                            - de Janvier 2022 à Juillet 2022
                         </Subtitle>
                         <br />
-                        <Text>
+                        <Text color={color === 'dark' ? 'white' : null}>
                            <Bold> Réalisation de 6 projets en autonomie :</Bold>
                         </Text>
                         {ocTechno.map((item, index) => {
-                           return <Text key={index}>{item}</Text>
+                           return (
+                              <Text key={index} color={color === 'dark' ? 'white' : null}>
+                                 {item}
+                              </Text>
+                           )
                         })}
                      </>
                   )}

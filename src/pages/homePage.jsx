@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Skils from '../components/homePage/Skils'
 import AboutMe from '../components/homePage/AboutMe'
 import ExperiencesAndFormations from '../components/homePage/ExperiencesAndFormations'
 import { ProgressBar } from '@tremor/react'
-
-const myComponents = [
-   {
-      comp: <AboutMe />,
-   },
-   {
-      comp: <Skils />,
-   },
-   {
-      comp: <ExperiencesAndFormations />,
-   },
-]
+import { ThemeContext } from '../components/layout/layout'
 
 export default function HomePage() {
    const [scrollLevel, setScrollLevel] = useState(0)
+   const { theme, setTheme } = useContext(ThemeContext)
+
+   const myComponents = [
+      {
+         comp: <AboutMe color={theme} />,
+      },
+      {
+         comp: <Skils color={theme} />,
+      },
+      {
+         comp: <ExperiencesAndFormations color={theme} />,
+      },
+   ]
 
    useEffect(() => {
       const handleScroll = () => {

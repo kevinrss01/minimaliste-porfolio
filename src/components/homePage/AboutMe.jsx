@@ -3,15 +3,21 @@ import { Accordion, AccordionList, AccordionHeader, AccordionBody } from '@tremo
 import { Bold, Text } from '@tremor/react'
 import photo from '../../images/Pro1.jpg'
 
-export default function AboutMe() {
+export default function AboutMe({ color }) {
    return (
       <section>
          <img src={photo} alt='img' />
          <AccordionList>
-            <Accordion expanded={true}>
+            <Accordion
+               expanded={true}
+               style={{
+                  backgroundColor: color === 'dark' ? '#282A3A' : 'white',
+                  color: color === 'dark' ? 'white' : 'black',
+               }}
+            >
                <AccordionHeader>À propos de moi</AccordionHeader>
                <AccordionBody>
-                  <Text>
+                  <Text color={color === 'dark' ? 'white' : null}>
                      Je m'appelle <Bold>Kevin Rousseau</Bold>, j'ai 21 ans et j'habite à Versailles.
                      Je suis actuellement en{' '}
                      <a
@@ -41,10 +47,16 @@ export default function AboutMe() {
                   </Text>
                </AccordionBody>
             </Accordion>
-            <Accordion expanded={false}>
+            <Accordion
+               expanded={false}
+               style={{
+                  backgroundColor: color === 'dark' ? '#282A3A' : 'white',
+                  color: color === 'dark' ? 'white' : 'black',
+               }}
+            >
                <AccordionHeader>Mon parcours</AccordionHeader>
                <AccordionBody>
-                  <Text>
+                  <Text color={color === 'dark' ? 'white' : null}>
                      Ma scolarité s'est déroulée principalement dans des filières professionnelles.
                      <br /> Après un CAP carrosserie j'ai rapidement intégré le monde du travail.
                      J'ai par exemple travaillé dans la restauration pendant deux ans en tant que
