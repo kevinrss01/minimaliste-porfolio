@@ -108,11 +108,7 @@ export default function SingleProject() {
                      <Bold>Technologies utilisées : </Bold>
                      <ul>
                         {Object.keys(languages).map((key, index) => {
-                           return (
-                              <li key={index}>
-                                 {languages[key]} lignes de code en {key}
-                              </li>
-                           )
+                           return <li key={index}>- {key}</li>
                         })}
                      </ul>
                   </Text>
