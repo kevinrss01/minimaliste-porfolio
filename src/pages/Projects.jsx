@@ -65,6 +65,7 @@ export default function Projects({ color }) {
                                  backgroundColor: theme === 'dark' ? '#282A3A' : 'white',
                                  color: theme === 'dark' ? 'white' : null,
                                  cursor: 'pointer',
+                                 marginBottom: '20px',
                               }}
                            >
                               <div style={{ display: 'flex', alignItems: 'center' }}>

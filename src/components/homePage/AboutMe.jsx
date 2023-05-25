@@ -62,7 +62,7 @@ export default function AboutMe({ color }) {
                      J'ai par exemple travaillé dans la restauration pendant deux ans en tant que
                      pizzaiolo. <br />
                      Ma passion pour les nouvelles technologies, mon attrait pour la résolution de
-                     problème et mon capacité de logique mon orienté vers le développement web.
+                     problème et ma capacité de logique mon orienté vers le développement web.
                   </Text>
                </AccordionBody>
             </Accordion>

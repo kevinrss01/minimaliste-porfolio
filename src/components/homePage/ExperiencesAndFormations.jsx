@@ -28,7 +28,7 @@ export default function ExperiencesAndFormations({ color }) {
                   setIsLoading(false)
                }}
                className='mt-6'
-               color={color === 'dark' ? 'white' : null}
+               color={color === 'dark' ? 'white' : 'blue'}
             >
                <Tab value='1' text='Experiences' icon={GiNetworkBars} />
                <Tab value='2' text='Formations' icon={FaSchool} />
