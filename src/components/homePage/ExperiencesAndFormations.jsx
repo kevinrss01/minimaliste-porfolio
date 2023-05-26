@@ -3,7 +3,7 @@ import { Bold, Card, Metric, Subtitle, Text, Title, TabList, Tab, Callout } from
 import { GiNetworkBars } from 'react-icons/gi'
 import { FaSchool } from 'react-icons/fa'
 import { BiCode } from 'react-icons/bi'
-import { ipssiTecho, ocTechno } from '../../utils/data'
+import { ipssiTecho, ocTechno, esgiTechno } from '../../utils/data'
 import Loader from '../Loader'
 
 export default function ExperiencesAndFormations({ color }) {
@@ -78,6 +78,34 @@ export default function ExperiencesAndFormations({ color }) {
                         <Subtitle color={color === 'dark' ? 'white' : null}>
                            {' '}
                            <a
+                              href='https://www.esgi.fr/programmes/ingenierie-blockchain.html'
+                              style={{ textDecoration: 'underline' }}
+                              target='_blank'
+                              rel='noreferrer'
+                           >
+                              ESGI
+                           </a>{' '}
+                           - de septembre 2023 à septembre 2024
+                           <Bold
+                              style={{
+                                 marginLeft: '10px',
+                              }}
+                           >
+                              (Bachelor développement Ingéniérie Blockchain)
+                           </Bold>
+                        </Subtitle>
+                        <br />
+                        {esgiTechno.map((item, index) => {
+                           return (
+                              <Text key={index} color={color === 'dark' ? 'white' : null}>
+                                 - {item}
+                              </Text>
+                           )
+                        })}
+                        <br />
+                        <Subtitle color={color === 'dark' ? 'white' : null}>
+                           {' '}
+                           <a
                               href='https://ecole-ipssi.com/'
                               style={{ textDecoration: 'underline' }}
                               target='_blank'
@@ -85,7 +113,14 @@ export default function ExperiencesAndFormations({ color }) {
                            >
                               IPSSI
                            </a>{' '}
-                           - de Octobre 2022 à octobre 2023
+                           - de septembre 2022 à septembre 2023
+                           <Bold
+                              style={{
+                                 marginLeft: '10px',
+                              }}
+                           >
+                              (Bachelor développement FullStack et Devops)
+                           </Bold>
                         </Subtitle>
                         <br />
                         {ipssiTecho.map((item, index) => {
@@ -107,6 +142,13 @@ export default function ExperiencesAndFormations({ color }) {
                               OpenClassrooms
                            </a>{' '}
                            - de Janvier 2022 à Juillet 2022
+                           <Bold
+                              style={{
+                                 marginLeft: '10px',
+                              }}
+                           >
+                              (Bac+2)
+                           </Bold>
                         </Subtitle>
                         <br />
                         <Text color={color === 'dark' ? 'white' : null}>
