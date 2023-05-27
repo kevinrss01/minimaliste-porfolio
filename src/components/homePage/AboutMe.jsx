@@ -60,9 +60,9 @@ export default function AboutMe({ color }) {
                      Ma scolarité s'est déroulée principalement dans des filières professionnelles.
                      <br /> Après un CAP carrosserie j'ai rapidement intégré le monde du travail.
                      J'ai par exemple travaillé dans la restauration pendant deux ans en tant que
-                     pizzaiolo. <br />
+                     pizzaïolo. <br />
                      Ma passion pour les nouvelles technologies, mon attrait pour la résolution de
-                     problème et ma capacité de logique mon orienté vers le développement web.
+                     problème et ma capacité de logique m'ont orienté vers le développement web.
                   </Text>
                </AccordionBody>
             </Accordion>
