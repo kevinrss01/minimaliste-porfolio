@@ -41,9 +41,12 @@ export default function Projects({ color }) {
             <Loader />
          ) : (
             <div className='project-card-container'>
-               <Button icon={AiFillGithub} color={theme === 'dark' ? darkColor : 'blue'}>
-                  Voir tous mes projets sur GitHub
-               </Button>
+               <a href='https://github.com/kevinrss01'>
+                  <Button icon={AiFillGithub} color={theme === 'dark' ? darkColor : 'blue'}>
+                     Voir tous mes projets sur GitHub
+                  </Button>
+               </a>
+
                <>
                   <div
                      style={{
