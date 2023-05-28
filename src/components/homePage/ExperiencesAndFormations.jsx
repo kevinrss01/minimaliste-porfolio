@@ -98,7 +98,7 @@ export default function ExperiencesAndFormations({ color }) {
                         {esgiTechno.map((item, index) => {
                            return (
                               <Text key={index} color={color === 'dark' ? 'white' : null}>
-                                 - {item}ut
+                                 - {item}
                               </Text>
                            )
                         })}
